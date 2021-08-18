@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="mybatis.mapper.member">
+
+	<resultMap type="member" id="memVo">
+		<result column="usercode" property="code"/>
+		<result column="userid" property="id"/>
+		<result column="userpassword" property="password"/>
+		<result column="username" property="name"/>
+		<result column="usernickname" property="nickname"/>
+		<result column="userbirth" property="birth"/>
+		<result column="usergender" property="gender"/>
+		<result column="usertel" property="tel"/>
+		<result column="userintro" property="intro"/>
+		<result column="userinterest" property="interest"/>
+		<result column="officialaccount" property="official"/>
+		<result column="profilephoto" property="profilephoto"/>
+		<result column="useraddress" property="address"/>
+	</resultMap>
+	
+	<!-- 반복적으로 나오는 쿼리를 묶어서 처리 -->
+	<sql id="selectMembers">
+		SELECT * FROM member_tbl
+	</sql>
+	
+	<select id="selectLogInMember" resultMap="memVo">
+		<include refid="selectMembers"/>
+		WHERE usercode=#{code}
+	</select>
+	
+	<select id="selectId" resultMap="memVo">
+		<include refid="selectMembers" />
+		WHERE userid=#{id}
+	</select>
+	
+	<select id="selectNickname" resultMap="memVo">
+		<include refid="selectMembers" />
+		WHERE usernickname=#{nickname}
+	</select>
+	<select id="updateMember" parameterType="member">
+		UPDATE member_tbl SET userid=#{id}, 
+							  usernickname=#{nickname}, 
+							  username=#{name}, usertel=#{tel}, 
+							  useraddress=#{address}, 
+							  userintro=#{intro}
+							  WHERE usercode=#{code}
+	</select>
+	
+	<select id="updatePassword" parameterType="member">
+		UPDATE member_tbl SET userpassword=#{password}
+							  WHERE usercode=#{code}
+	</select>
+	
+	
+</mapper>
