@@ -54,5 +54,4 @@
 							  WHERE usercode=#{code}
 	</select>
 	
-	
 </mapper>

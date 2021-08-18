@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import astery.dao.MemberDAO;
-import astery.exception.AlreadyExistionMemberException;
+import astery.exception.AlreadyExistionIdException;
+import astery.exception.AlreadyExistionNicknameException;
 import astery.service.ChangeProfileService;
 import astery.validator.ChangeProfileCommandValidator;
 import astery.vo.ChangeProfileCommand;
@@ -58,18 +59,20 @@ public class ChangeProfileController {
 		}
 		
 		String usercode = (String)session.getAttribute("code");
-		System.out.println(usercode);
 		
 		try {
 			changeProfileService.changeProfile(
 					usercode,
 					changeProfileCommand);
-			System.out.println("1");
 			return "settings/edit/profile";
-		}catch(AlreadyExistionMemberException e) {
-			System.out.println("오류 발생");
-			/* errors.rejectValue("", "duplicate"); */
-			return "/";
+		}catch(AlreadyExistionIdException e) {
+			System.out.println("아이디 중복 오류 발생");
+			errors.rejectValue("id", "duplicate");
+			return "settings/edit/profile";
+		}catch(AlreadyExistionNicknameException e2) {
+			System.out.println("닉네임 중복 오류 발생");
+			errors.rejectValue("nickname", "duplicate");
+			return "settings/edit/profile";
 		}
 	}
 }

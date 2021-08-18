@@ -54,7 +54,6 @@ public class MemberDAO {
 	
 	public int updateMember(Member member) {
 		int result = sqlSession.update("mybatis.mapper.member.updateMember",member);
-		System.out.println("3");
 		return result; //삽입,변경, 삭제된 데이터의 개수
 	}
 	

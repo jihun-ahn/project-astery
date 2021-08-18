@@ -23,6 +23,7 @@
 				            <div class="input">
 				                <div class="inputText">
 				                	<form:password path="oldPassword"/>
+				                	<form:errors path="oldPassword"/>
 				                </div>
 				                <div class="text"></div>
 				            </div>
@@ -41,6 +42,7 @@
 				            <div class="input">
 				                <div class="inputText">
 				                	<form:password path="confirmNewPassword"/>
+				                	<form:errors path="confirmNewPassword"/>
 				                </div>
 				                <div class="text"></div>
 				            </div>

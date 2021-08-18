@@ -28,6 +28,7 @@
 				            <div class="input">
 				                <div class="inputText">
 				                	<form:input path="id" value="${member.id}"/>
+				                	<form:errors path="id"/>
 				                </div>
 				                <div class="text"></div>
 				            </div>
@@ -37,6 +38,7 @@
 				            <div class="input">
 				                <div class="inputText">
 				                	<form:input path="nickname" value="${member.nickname}"/>
+				                	<form:errors path="nickname"/>
 				                </div>
 				                <div class="text"></div>
 				            </div>

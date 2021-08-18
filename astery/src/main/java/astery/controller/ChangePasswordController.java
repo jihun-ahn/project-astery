@@ -7,6 +7,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import astery.exception.NotMatchingConfirmException;
 import astery.exception.NotMatchingException;
 import astery.service.ChangePasswordService;
 import astery.vo.ChangePasswordCommand;
@@ -36,11 +37,14 @@ public class ChangePasswordController {
 		String usercode = (String)session.getAttribute("code");
 		try {
 			changePasswordService.changePassword(usercode, changePasswordCommand);
-			System.out.println("1");
 			return "settings/edit/password";
 		}catch(NotMatchingException e) {
-			System.out.println("오류 발생");
-			errors.rejectValue("currentPassword", "duplicate");
+			System.out.println("현재 비밀번호 오류 발생");
+			errors.rejectValue("oldPassword", "notMatching");
+			return "settings/edit/password";
+		}catch(NotMatchingConfirmException e2) {
+			System.out.println("확인 비밀번호 오류 발생");
+			errors.rejectValue("confirmNewPassword", "notMatching");
 			return "settings/edit/password";
 		}
 		
