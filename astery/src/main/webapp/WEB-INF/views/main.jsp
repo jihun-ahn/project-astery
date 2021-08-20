@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>메인화면</title>
-<link rel="stylesheet" type="text/css" href="/resources/css/astery.css">
+<link rel="stylesheet" type="text/css" href="/resources/css/astery.css?ver=1">
 </head>
 <body>
 <jsp:include page="include/header.jsp" />

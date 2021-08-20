@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>설정</title>
-<link rel="stylesheet" type="text/css" href="/resources/css/astery.css" >
+<link rel="stylesheet" type="text/css" href="/resources/css/astery.css?after" >
 </head>
 <body>
 	<jsp:include page="../include/header.jsp" />

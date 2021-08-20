@@ -7,6 +7,6 @@
 		<!-- <li><a href="">알림 설정</a></li> -->
 		<li><a href="">공개 범위</a></li>
 		<li><a href="">비공개 계정</a></li>
-		<li><a href="">공식 계정 전환</a></li>
+		<li><a href="/settings/official">공식 계정 전환</a></li>
 	</ul>
 </article>

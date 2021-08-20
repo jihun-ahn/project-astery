@@ -54,4 +54,8 @@
 							  WHERE usercode=#{code}
 	</select>
 	
+	<select id="updateOfficial" parameterType="member">
+		UPDATE member_tbl SET OFFICIALACCOUNT=#{official}
+							  WHERE usercode=#{code}
+	</select>
 </mapper>

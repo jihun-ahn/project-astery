@@ -41,29 +41,17 @@ public class MemberDAO {
 		return lists;
 	}
 	
-	public Member selectByCode(Long code) {
-		Member m = sqlSession.selectOne("mybatis.mapper.member.selectbyId",code);
-		return m;
-	}
-	
-	/*
-	 * public int insertMember(Member member) { int result =
-	 * sqlSession.insert("mybatis.mapper.member.insertMember",member);
-	 * sqlSession.commit(); return result; //삽입,변경, 삭제된 데이터의 개수 }
-	 */
-	
 	public int updateMember(Member member) {
 		int result = sqlSession.update("mybatis.mapper.member.updateMember",member);
-		return result; //삽입,변경, 삭제된 데이터의 개수
+		return result;
 	}
 	
 	public int updatePassword(Member member) {
 		int result = sqlSession.update("mybatis.mapper.member.updatePassword",member);
 		return result;
 	}
-	/*
-	 * public int deleteMember(String email) { int result =
-	 * sqlSession.delete("mybatis.mapper.member.deleteMember",email);
-	 * sqlSession.commit(); return result; //삽입,변경, 삭제된 데이터의 개수 }
-	 */
+	public int updateOfficial(Member member) {
+		int result = sqlSession.update("mybatis.mapper.member.updateOfficial", member);
+		return result;
+	}
 }

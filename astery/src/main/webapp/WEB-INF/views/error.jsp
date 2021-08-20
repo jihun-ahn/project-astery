@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/resources/css/astery.css">
+<link rel="stylesheet" type="text/css" href="/resources/css/astery.css?after">
 <title>잘못된 접근</title>
 </head>
 <body>

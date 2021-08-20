@@ -26,38 +26,44 @@ public class Member {	//설정에 필요한 계정 정보, 수정 필요
 		this.password = newPassword;
 	}
 
-	public void changeId(String oldId, String newId) {
+	public void changeId(String newId) {
 		
 		this.id = newId;		
 	}
 
-	public void changeNickname(String oldNickname, String newNickname) {
+	public void changeNickname(String newNickname) {
 		
 		
 		this.nickname = newNickname;		
 	}
 
-	public void changeName(String oldName, String newName) {
+	public void changeName(String newName) {
 		
 		this.name = newName;		
 	}
 
-	public void changeTel(String oldTel, String newTel) {
+	public void changeTel(String newTel) {
 		
 		
 		this.tel = newTel;		
 	}
 
-	public void changeAddress(String oldAddress, String newAddress) {
+	public void changeAddress(String newAddress) {
 		
 		
 		this.address = newAddress;
 	}
 
-	public void changeIntro(String oldIntro, String newIntro) {
+	public void changeIntro(String newIntro) {
 		
 		
 		this.intro = newIntro;
+	}
+	
+	public void changeOfficial(char newOfficial) {
+		
+		
+		this.official = newOfficial;
 	}
 	
 	public int getCode() {

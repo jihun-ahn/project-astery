@@ -31,12 +31,12 @@ public class ChangeProfileService {
 		if(chkNickname!=null && !member.getNickname().equals(changeProfileCommand.getNickname())) {
 			throw new AlreadyExistionNicknameException();
 		}
-		member.changeId(member.getId(), changeProfileCommand.getId());
-		member.changeNickname(member.getNickname(), changeProfileCommand.getNickname());
-		member.changeName(member.getName(), changeProfileCommand.getName());
-		member.changeTel(member.getTel(), changeProfileCommand.getTel());
-		member.changeAddress(member.getAddress(), changeProfileCommand.getAddress());
-		member.changeIntro(member.getIntro(), changeProfileCommand.getIntro());
+		member.changeId(changeProfileCommand.getId());
+		member.changeNickname(changeProfileCommand.getNickname());
+		member.changeName(changeProfileCommand.getName());
+		member.changeTel(changeProfileCommand.getTel());
+		member.changeAddress(changeProfileCommand.getAddress());
+		member.changeIntro(changeProfileCommand.getIntro());
 		dao.updateMember(member);
 	}
 }

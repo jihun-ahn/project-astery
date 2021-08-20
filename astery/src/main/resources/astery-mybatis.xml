@@ -35,5 +35,8 @@
 	<bean id="memberDao" class="astery.dao.MemberDAO">
 		<property name="sqlSession" ref="sqlSession" />
 	</bean>
-		
+	
+	<bean id="postDao" class="astery.dao.PostDAO">
+		<property name="sqlSession" ref="sqlSession" />
+	</bean>	
 </beans>
