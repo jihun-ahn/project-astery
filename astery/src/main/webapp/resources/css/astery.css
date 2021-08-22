@@ -61,9 +61,6 @@ ul{
     color: rgb(90, 90, 90);
 }
 .aster{
-    font-family: 'Playfair Display', serif;
-    font-size: 70px;
-    line-height: 90px;
 }
 .textbox{
     background-color: white;
@@ -104,6 +101,19 @@ article{
 .setting{
     width: 50%;
 }
-.selectList{
-    border-left
+.upload{
+	width: 30px;
+	height: 30px;
+}
+.notice{
+	width: 30px;
+	height: 30px;
+}
+.profile{
+	width: 30px;
+	height: 30px;
+}
+.setting{
+	width: 30px;
+	height: 30px;
 }

@@ -1,0 +1,70 @@
+article{
+    margin-bottom: 50px;
+}
+main {
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.profilephotoPic {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+}
+.feedPic{
+    display: center;
+    width: 612px;
+}
+.iconMore{
+    justify-self: end;
+    height: 40px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 24px;
+    height: 24px;
+}
+.icon-left{
+    display: flex;
+    align-items: center;
+}
+.icon-react{
+    height: 40px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 24px;
+    height: 24px;
+}
+.likePic{
+    border-radius : 100%;
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fafafa;
+}
+.commentInput{
+        font-size: 14px;
+        width: 500px;
+        padding: 10px 16px;
+        border-style: none;
+        box-sizing: border-box;
+        color: #262626;
+}
+button.commentButton {
+    color: #0095f6;
+    background-color: #fff;
+    border-style: none;
+    height: 40px;
+    width: 40px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.lcon{
+	width: 30px;
+	height: 30px;
+	
+}
