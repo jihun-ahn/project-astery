@@ -7,8 +7,9 @@
 
 	<typeAliases> 
 		<typeAlias type="astery.vo.Member" alias="member"/>
+		<typeAlias type="astery.vo.Post" alias="post"/>
 	</typeAliases>
-	
+		
 	<!-- <mappers>
 		<mapper resource="mappers/member.xml"/>
 	</mappers> -->

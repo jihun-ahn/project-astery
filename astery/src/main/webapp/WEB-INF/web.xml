@@ -16,8 +16,7 @@
 			<param-name>contextConfigLocation</param-name>
 			<param-value>
 				classpath:astery-mvc.xml
-				<!--
-				classpath:astery-member.xml-->
+				classpath:astery-member.xml
 				classpath:astery-controller.xml
 				classpath:astery-mybatis.xml
 			</param-value>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="mybatis.mapper.post">
+
+	<resultMap type="post" id="postVo">
+		<result column="postid" property="postcode"/>
+		<result column="usercode" property="code"/>
+		<result column="picture" property="picture"/>
+		<result column="content" property="p_content"/>
+		<result column="postdate" property="postDate"/>
+		<result column="groupchk" property="groupChk"/>
+	</resultMap>
+	
+	<sql id="selectPost">
+		
+	</sql>
+	
+	<select id="selectPostForLoginMember" resultType="post">
+		SELECT * FROM post_tbl
+		WHERE usercode=#{code}
+	</select>
+</mapper>
