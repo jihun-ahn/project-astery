@@ -11,7 +11,6 @@ public class Post {
 	private char groupChk;
 	
 	
-	
 	public int getPostNum() {
 		return postNum;
 	}

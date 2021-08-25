@@ -36,6 +36,7 @@
 	
 	<bean id="changeOfficialAccountController" class="astery.controller.ChangeOfficialAccountController">
 		<property name="changeOfficialAccountService" ref="changeOfficialAccountSvc" />
+		<property name="dao" ref="memberDao" />
 	</bean>
 	
 	<bean id="mainController" class="astery.controller.MainController"></bean>

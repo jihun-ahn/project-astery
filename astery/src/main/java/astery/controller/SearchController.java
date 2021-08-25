@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/search")
 public class SearchController {
 	
-	//커맨드객체
+	
 	
 }

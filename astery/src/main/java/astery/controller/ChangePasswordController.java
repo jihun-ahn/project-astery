@@ -37,7 +37,7 @@ public class ChangePasswordController {
 		String usercode = (String)session.getAttribute("code");
 		try {
 			changePasswordService.changePassword(usercode, changePasswordCommand);
-			return "settings/edit/password";
+			return "settings/edit/editComplete";
 		}catch(NotMatchingException e) {
 			System.out.println("현재 비밀번호 오류 발생");
 			errors.rejectValue("oldPassword", "notMatching");

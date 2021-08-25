@@ -22,7 +22,14 @@ public class SettingController {
 	
 	
 	@RequestMapping("/settingForm")
-	public String settingForm() {
+	public String settingForm(HttpSession session) {
+		
+		String usercode = (String)session.getAttribute("code");
+		
+		Member member = dao.selectMember(usercode);
+		
+		session.setAttribute("official", Character.toString(member.getOfficial()));
+		
 		return "settings/settings";
 	}
 

@@ -64,7 +64,7 @@ public class ChangeProfileController {
 			changeProfileService.changeProfile(
 					usercode,
 					changeProfileCommand);
-			return "settings/edit/profile";
+			return "settings/edit/editComplete";
 		}catch(AlreadyExistionIdException e) {
 			System.out.println("아이디 중복 오류 발생");
 			errors.rejectValue("id", "duplicate");

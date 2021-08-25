@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: JiHun
 Build-Jdk: 1.8.0_291
+=======
+Built-By: GREEN
+Build-Jdk: 1.8.0_281
+>>>>>>> origin/jihun
 Created-By: Maven Integration for Eclipse
 

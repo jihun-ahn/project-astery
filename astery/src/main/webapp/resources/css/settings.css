@@ -1,0 +1,68 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family:sans-serif;
+}
+.settingList{
+    width: 25%;
+    border-right: none;
+}
+.settingList a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    height: 100%;
+    padding: 16px 16px 16px 30px;
+}
+.settingList li{
+    font-size: 20px;
+    padding: 5px;
+}
+.settingForm{
+    width: 40%;
+    padding: 10px 10px;
+}
+form{
+	padding-left: 20px;
+}
+.item{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.inputcell {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.inputText input{
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.textarea{
+	border: none;
+}
+#intro{
+	margin-top: 10px;
+	border: 1px solid lightgray;
+	border-radius: 30px;
+	padding: 0px 20px;
+	resize: vertical;
+	width: 100%;
+  	height: 50px;
+}
+#intro:focus{
+	outline:none;
+}
+
+.btn:hover {
+  background-position: right;
+  text-align: center;
+}
