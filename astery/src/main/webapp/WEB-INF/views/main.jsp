@@ -43,12 +43,10 @@
     			</div>
     			<div class="icon">
     				<!-- 좋아요, 댓글달기, 북마크 -->
+    				<span class="" aria-hidden="true" onclick="location.href='/main/post/${p.id}'"></span> 
     				 <li><a href='<c:url value='/'/>'><img class="like" src="/resources/img/like.png"></a></li>
     				  <li><a href='<c:url value='/'/>'><img class="comment" src="/resources/img/comment.png"></a></li>
     				   <li><a href='<c:url value='/'/>'><img class="bookmark" src="/resources/img/bookmark.png"></a></li>
-    			</div>
-    			<div> <!--  좋아요갯수표시 -->
-    				ㅇㅇㅇ님 외 12345678명이 좋아합니다.
     			</div>
     			<div class="write"> <!-- 글내용 -->
 					<span>${p.description}</span>
@@ -56,7 +54,7 @@
 				
 				<!-- 댓글 -->
 				<div><!-- 댓글작성 -->
-                	<input id="commentInput" class="commentInput" type="text" placeholder="댓글 달기..." >
+                	<input id="commentInput" class="commentInput" type="text" placeholder="댓글 작성" >
                 	<button type="submit" class="commentButton">게시</button>
               	</div>
     		</article>

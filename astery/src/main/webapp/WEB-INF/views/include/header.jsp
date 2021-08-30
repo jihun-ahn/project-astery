@@ -9,9 +9,9 @@ s<%@ page language="java" contentType="text/html; charset=UTF-8"
         </div>
         <div class="textbox"><input type="text" name="search" placeholder="🔍검색"></div>
         <ul class="menuList">
-            <li><a href="<c:url value='/views/upload'/>"><img class="upload" src="/resources/img/upload.png"></a></li>
+            <li><a href="/main/upload"><img class="upload" src="/resources/img/upload.png"></a></li>
             <li><a href='<c:url value='/'/>'><img class="notice" src="/resources/img/notice.png"></a></li>
-            <li><a href=''><img class="profile" src="/resources/img/profile.png"></a></li>
+            <li><a href='<c:url value='/main/user/${user.id}'/>'><img class="profile" src="/resources/img/profile.png"></a></li>
             <li class="aster"><a href="<c:url value='/settings/settingForm'/>"><img class="setting" src="/resources/img/setting.png"></a></li>
         </ul>
     </div>
