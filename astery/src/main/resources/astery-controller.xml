@@ -19,7 +19,17 @@
 		<constructor-arg ref="memberDao"/>
 	</bean>
 	
+	<bean id="searchSvc" class="astery.service.SearchService">
+		<constructor-arg ref="memberDao"/>
+		<constructor-arg ref="postDao"/>
+	</bean>
+	
+	
 	<!-- 컨트롤러 -->
+	
+	<bean id="mainController" class="astery.controller.MainController">
+		<property name="p_dao" ref="postDao" />
+	</bean>
 	
 	<bean id="settingController" class="astery.controller.SettingController">
 		<property name="dao" ref="memberDao" />
@@ -39,7 +49,9 @@
 		<property name="dao" ref="memberDao" />
 	</bean>
 	
-	<bean id="mainController" class="astery.controller.MainController"></bean>
+	<bean id="searchController" class="astery.controller.SearchController">
+		<property name="searchService" ref="searchSvc" />
+	</bean>
 	
 	<mvc:interceptors>
 		<mvc:interceptor>

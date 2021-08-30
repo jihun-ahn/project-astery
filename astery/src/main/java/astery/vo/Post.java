@@ -3,7 +3,7 @@ package astery.vo;
 import java.util.Date;
 
 public class Post {
-	private int postNum;
+	private int postId;
 	private int usercode;
 	private String picture;
 	private String content;
@@ -11,11 +11,11 @@ public class Post {
 	private char groupChk;
 	
 	
-	public int getPostNum() {
-		return postNum;
+	public int getPostId() {
+		return postId;
 	}
-	public void setPostNum(int postNum) {
-		this.postNum = postNum;
+	public void setPostId(int postId) {
+		this.postId = postId;
 	}
 	public int getUsercode() {
 		return usercode;

@@ -32,7 +32,7 @@ public class ChangeOfficialAccountController {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public String form(ChangeOfficialAccountCommand changeOfficialAccountCommand, HttpSession session) {
-		String usercode = (String)session.getAttribute("code");
+		int usercode = (int)session.getAttribute("code");
 		Member member = dao.selectMember(usercode);
 		if(member.getOfficial()=='F') {
 			return "settings/edit/official";
@@ -49,7 +49,7 @@ public class ChangeOfficialAccountController {
 			return "settings/edit/official";
 		}
 		
-		String usercode = (String)session.getAttribute("code");
+		int usercode = (int)session.getAttribute("code");
 		
 		try {
 			changeOfficialAccountService.changeOfficialAccount(usercode, changeOfficialAccountCommand.getOfficial());

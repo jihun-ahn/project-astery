@@ -16,13 +16,13 @@ public class SignInCheckInterceptor extends HandlerInterceptorAdapter{
 		
 		if(session != null) {
 			// 로그인 체크
-			String code = (String)session.getAttribute("code");
+			int code = (int)session.getAttribute("code");
 			
-			if(code!=null) {//로그인이 되어 있음
+			if(code!=0) {//로그인이 되어 있음
 				return true;
 			}
 		}
-		 response.sendRedirect(request.getContextPath()+"/login");
+		 response.sendRedirect("error/error");
 		return false;
 	}
 }

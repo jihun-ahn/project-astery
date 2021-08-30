@@ -29,27 +29,29 @@
 	   	<div class="feed">
 	   		<article>
 	   			<header>
-	   				<div class="profilephoto"> <!--  프로필사진  -->
+<%-- 	   				<div class="profilephoto"> <!--  프로필사진  -->
 	   					<a href="/main/user/${p.usercode}">
 	   						<img class="profilephotoPic" src="/images/profile/${p.user.profilephoto}">
 	   					</a>
 	   				</div>
 	   				<div class="usernickname"> <!-- 닉네임 -->
 	   					<a href="/main/user/${p.user.id}">${p.user.userId}</a>
-	   				</div>
+	   				</div> --%>
 	   			</header>
-	   			<div class="feedImage"> <!-- 게시물사진 -->
+<%-- 	   			<div class="feedImage"> <!-- 게시물사진 -->
 	   				<c:forEach var="img" items="${img}">
 	   					<c:if test="${p.id == img.postId}">
 	   						<img class="feedPic" src="/images/${p.user.userId}/${img.filename}" class="imgg">
 	   					</c:if>
-	   				</c:forEach>
+	   				</c:forEach>--%>
 	   			</div>
 	   			<div class="icon">
 	   				<!-- 좋아요, 댓글달기, 북마크 -->
-	   				 <li><a href='<c:url value='/'/>'><img class="like" src="/resources/img/like.png"></a></li>
-	   				  <li><a href='<c:url value='/'/>'><img class="comment" src="/resources/img/comment.png"></a></li>
-	   				   <li><a href='<c:url value='/'/>'><img class="bookmark" src="/resources/img/bookmark.png"></a></li>
+	   				<ul>
+	   					<li><a href='<c:url value='/'/>'><img class="like" src="/resources/img/like.png"></a></li>
+	   				  	<li><a href='<c:url value='/'/>'><img class="comment" src="/resources/img/comment.png"></a></li>
+	   					<li><a href='<c:url value='/'/>'><img class="bookmark" src="/resources/img/bookmark.png"></a></li>
+	   				</ul>
 	   			</div>
 	   			<div> <!--  좋아요갯수표시 -->
 	   				ㅇㅇㅇ님 외 12345678명이 좋아합니다.

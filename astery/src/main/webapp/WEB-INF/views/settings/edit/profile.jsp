@@ -86,6 +86,10 @@
 	        </article>
 	    </section>
 	    <footer></footer>
+	    <script>
+			var intro = document.getElementById('intro');
+			intro.innerHTML = '${member.intro}';
+		</script>
     </div>
 </body>
 </html>

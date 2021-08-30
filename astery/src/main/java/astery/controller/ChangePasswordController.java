@@ -34,7 +34,7 @@ public class ChangePasswordController {
 		if(errors.hasErrors()) {
 			return "settings/edit/password";
 		}
-		String usercode = (String)session.getAttribute("code");
+		int usercode = (int)session.getAttribute("code");
 		try {
 			changePasswordService.changePassword(usercode, changePasswordCommand);
 			return "settings/edit/editComplete";

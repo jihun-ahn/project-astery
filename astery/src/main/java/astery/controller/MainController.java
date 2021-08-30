@@ -25,25 +25,14 @@ public class MainController {
 	public ModelAndView mainForm(HttpServletRequest request) {
 	
 		HttpSession session = request.getSession();
-		String usercode = "100001";
+		int usercode = 100001;
 		session.setAttribute("code", usercode);
 		ModelAndView mav = new ModelAndView();
 		
 		List<Post> posts = p_dao.selectPostForLoginMember(usercode);
-		Post post = new Post();
-		post.setPostNum(1);
-		post.setUsercode(100001);
-		post.setPicture("1");
-		post.setContent("2");
-		post.setPostDate(new Date());
-		post.setGroupChk('F');
-		
-		if(posts==null) {
-			posts.add(post);
-		}
-		mav.addObject("posts", posts);
+
 		mav.setViewName("main");
-		
+		mav.addObject("posts", posts);
 		return mav; 
 	}
 	

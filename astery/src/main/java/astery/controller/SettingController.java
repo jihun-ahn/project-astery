@@ -24,7 +24,7 @@ public class SettingController {
 	@RequestMapping("/settingForm")
 	public String settingForm(HttpSession session) {
 		
-		String usercode = (String)session.getAttribute("code");
+		int usercode = (int)session.getAttribute("code");
 		
 		Member member = dao.selectMember(usercode);
 		
