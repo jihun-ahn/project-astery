@@ -7,10 +7,10 @@
             <a href="<c:url value='/'/>" class="logo">Astery<!--<img src="../img/Astery100x58.png">--></a>
         </div>
         <div class="textbox">
-        	<form action="<c:url value='/search'/>" method="GET">
+        	<form action="<c:url value='/search'/>" method="GET" id="searchbox">
         		<input type="text" name="search" id="search" placeholder="🔍검색">
 				<!-- <input type="image" src="/resources/img/search.png" alt="검색"> -->
-				<input type="submit" value="검색">
+				<input type="image" src="/resources/img/search.png" alt="검색">
 			</form>
        	</div>
         <ul class="menuList">

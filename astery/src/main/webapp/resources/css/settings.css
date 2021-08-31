@@ -20,6 +20,9 @@
     font-size: 20px;
     padding: 5px;
 }
+.settingList li:hover{
+	background-color: #f0f0f0;
+}
 .settingForm{
     width: 40%;
     padding: 10px 10px;
@@ -61,8 +64,14 @@ form{
 #intro:focus{
 	outline:none;
 }
-
 .btn:hover {
   background-position: right;
   text-align: center;
+}
+[type="submit"]{
+	width: 100px;
+	heigh: 30px;
+	font-size: 20px;
+	border-collapse: 5px;
+	margin-top: 10px;
 }

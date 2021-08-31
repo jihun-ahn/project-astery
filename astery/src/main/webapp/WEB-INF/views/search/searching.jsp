@@ -18,11 +18,15 @@
     		</c:if>
     		<c:if test="${!empty memberList}">
 	   			<c:forEach var="member" items="${memberList}">
-	   				<div class="profile">
-	                    <div class="profilephoto"><img src="${member.profilephoto}" alt="테스트프사"></div>
-	                    <div class="nickname"><span>${member.nickname}</span></div>
+		   			<div class="members">
+		   				<div class="s_profile">
+		                    <div class="s_profilephoto">
+		                    	<img src="${member.profilephoto}" alt="테스트프사">
+		                    </div>
+		                    <span class="s_nickname">${member.nickname}</span>
+		                </div>
+	                	<div class="s_intro"><span>${member.intro}</span></div>
 	                </div>
-                	<div class="intro"><span>${member.intro}</span></div>
 	   			</c:forEach>
 	   		</c:if>
 		</article>
@@ -32,18 +36,18 @@
     		</c:if>
     		<c:if test="${!empty postList}">
 	   			<c:forEach var="post" items="${postList}">
-	            	<div class="profile">
-	             		<div class="profilephoto">
-	             			<img src="/resources/img/${post.profilephoto}" alt="테스트프사">
-	             		</div>
-	             		<div class="nickname">
-	             			<span>${post.nickname}</span>
-	             		</div>
+		   			<div class="posts">
+		            	<div class="s_profile">
+		             		<div class="s_profilephoto">
+		             			<img src="/resources/img/${post.profilephoto}" alt="테스트프사">
+		             			<span class="s_nickname">${post.nickname}</span>
+	             			</div>
+		            	</div>
+		            	<div class="s_photo">
+		            		<img src="/resources/img/${post.picture}" alt="테스트사진">
+		            		</div>
+		            	<div class="s_content">${post.content}</div>
 	            	</div>
-	            	<div class="photo">
-	            		<img src="/resources/img/${post.picture}" alt="테스트사진">
-	            		</div>
-	            	<div class="content">${post.content}</div>
 	   			</c:forEach>
 	   		</c:if>
 		</article>

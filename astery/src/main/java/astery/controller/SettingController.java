@@ -30,7 +30,7 @@ public class SettingController {
 		
 		session.setAttribute("official", Character.toString(member.getOfficial()));
 		
-		return "settings/settings";
+		return "settings/edit/profile";
 	}
 
 }

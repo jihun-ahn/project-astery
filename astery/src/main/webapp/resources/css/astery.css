@@ -34,7 +34,9 @@ header{
 ul{
     list-style-type: none;
 }
-
+#searchbox{
+	width: 
+}
 [name=search]{
     height: 35px;
     outline: none;
@@ -64,11 +66,19 @@ ul{
 }
 .textbox{
     background-color: white;
-    width: 200px;
-    height: 40px;
+    width: 250px;
+    height: 50px;
     border-radius: 5px;
     border: 1px solid black;
     line-height: 40px;
+}
+#search{
+	position: relative;
+	bottom: 3px;
+}
+[type="image"]{
+	position: relative;
+	top: 7px;
 }
 input{
     border: none;
