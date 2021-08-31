@@ -18,7 +18,7 @@ public class ChangeProfileService {
 	}
 	
 	@Transactional
-	public void changeProfile(String usercode, ChangeProfileCommand changeProfileCommand) {
+	public void changeProfile(int usercode, ChangeProfileCommand changeProfileCommand) {
 		Member member = dao.selectMember(usercode);
 		
 		Member chkId = dao.selectById(changeProfileCommand.getId());

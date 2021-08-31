@@ -4,8 +4,10 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import astery.vo.Group;
 import astery.vo.ListCommand;
 import astery.vo.Member;
+import astery.vo.Post;
 
 public class MemberDAO {
 	private SqlSession sqlSession;
@@ -13,9 +15,21 @@ public class MemberDAO {
 	public void setSqlSession(SqlSession sqlSession) {
 		this.sqlSession = sqlSession;
 	}
-	public Member selectMember(String code) {
+	public Member selectMember(int code) {
 		Member member = sqlSession.selectOne("mybatis.mapper.member.selectLogInMember", code);
 		return member;
+	}
+	
+	// 사람 검색
+	public List<Member> searchMember(String search) {
+		List<Member> members = sqlSession.selectList("mybatis.mapper.member.selectMemberForSearch", search);
+		return members;
+	}
+
+	// 그룹 검색
+	public List<Group> searchGroup(String search){
+		List<Group> groups = sqlSession.selectList("mybatis.mapper.group.selectGroupForSearch", search);
+		return groups;
 	}
 	
 	public Member selectById(String id) {

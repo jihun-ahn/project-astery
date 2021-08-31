@@ -14,7 +14,7 @@ public class ChangePasswordService {
 		this.dao = dao;
 	}
 	@Transactional
-	public void changePassword(String usercode, ChangePasswordCommand changePasswordCommand) {
+	public void changePassword(int usercode, ChangePasswordCommand changePasswordCommand) {
 		Member member = dao.selectMember(usercode);
 		if(!changePasswordCommand.getNewPassword().equals(changePasswordCommand.getConfirmNewPassword())) {
 			throw new NotMatchingConfirmException();

@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<script>
+		alert('변경완료');
+		location.href='/';
+	</script>
 </body>
 </html>

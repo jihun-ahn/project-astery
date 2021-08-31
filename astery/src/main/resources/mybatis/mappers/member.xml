@@ -40,22 +40,30 @@
 		<include refid="selectMembers" />
 		WHERE usernickname=#{nickname}
 	</select>
-	<select id="updateMember" parameterType="member">
+	<update id="updateMember" parameterType="member">
 		UPDATE member_tbl SET userid=#{id}, 
 							  usernickname=#{nickname}, 
 							  username=#{name}, usertel=#{tel}, 
 							  useraddress=#{address}, 
 							  userintro=#{intro}
 							  WHERE usercode=#{code}
-	</select>
+	</update>
 	
-	<select id="updatePassword" parameterType="member">
+	<update id="updatePassword" parameterType="member">
 		UPDATE member_tbl SET userpassword=#{password}
 							  WHERE usercode=#{code}
-	</select>
+	</update>
 	
-	<select id="updateOfficial" parameterType="member">
+	<update id="updateOfficial" parameterType="member">
 		UPDATE member_tbl SET OFFICIALACCOUNT=#{official}
 							  WHERE usercode=#{code}
+	</update>
+	
+	<select id="selectMemberForSearch" resultMap="memVo">
+		<include refid="selectMembers"/>
+		WHERE usernickname LIKE '%' || #{search} || '%'
 	</select>
+	
+	
+	
 </mapper>

@@ -2,9 +2,29 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 		
+	<context:annotation-config/>
+		
+	<bean id="mainController2" class="astery.controller.MainController2"></bean>
+	
+	<bean id="userService" class="astery.service.UserServiceImpl">
+	<!-- <property name="userDAO" ref="userDAO" /> -->
+	</bean>
+	<bean id="userDAO" class="astery.dao.UserDAOImpl"/>
+	
+	<bean id="memberController" class="astery.controller.MemberController">
+		<property name="p_dao" ref="postDao" />
+	</bean>
+	
+	<bean id="memberService" class="astery.service.MemberServiceImpl" />
+	
+	<bean id="memberDAO" class="astery.dao.MemberDAOImpl"/>	
+		
+	
 	<!-- 서비스 -->
 	
 	<bean id="changeProfileSvc" class="astery.service.ChangeProfileService">
@@ -19,7 +39,17 @@
 		<constructor-arg ref="memberDao"/>
 	</bean>
 	
+	<bean id="searchSvc" class="astery.service.SearchService">
+		<constructor-arg ref="memberDao"/>
+		<constructor-arg ref="postDao"/>
+	</bean>
+	
+	
 	<!-- 컨트롤러 -->
+	
+	<bean id="mainController" class="astery.controller.MainController">
+		<property name="p_dao" ref="postDao" />
+	</bean>
 	
 	<bean id="settingController" class="astery.controller.SettingController">
 		<property name="dao" ref="memberDao" />
@@ -36,9 +66,12 @@
 	
 	<bean id="changeOfficialAccountController" class="astery.controller.ChangeOfficialAccountController">
 		<property name="changeOfficialAccountService" ref="changeOfficialAccountSvc" />
+		<property name="dao" ref="memberDao" />
 	</bean>
 	
-	<bean id="mainController" class="astery.controller.MainController"></bean>
+	<bean id="searchController" class="astery.controller.SearchController">
+		<property name="searchService" ref="searchSvc" />
+	</bean>
 	
 	<mvc:interceptors>
 		<mvc:interceptor>

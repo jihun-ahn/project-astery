@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="userMapper">
+	<insert id="signUp" parameterType="astery.DTO.UserDTO">
+		INSERT INTO test_member
+			VALUES (
+				 tmem_seq.nextval
+				,0
+				,#{id}
+				,#{passWord}
+				,#{name}
+					)
+	</insert>
+	
+	<select id="loginCheck" resultType="String">
+		SELECT NAME AS userName FROM test_member
+			WHERE ID = #{id} AND PASSWORD = #{passWord}
+	</select>
+	
+	<select id="viewMember" resultType="astery.DTO.UserDTO">
+		SELECT ID , PASSWORD, NAME AS userName
+			FROM test_member
+				WHERE id = #{id} AND PASSWORD = #{passWord}
+	</select>
+</mapper>

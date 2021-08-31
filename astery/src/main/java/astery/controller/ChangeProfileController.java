@@ -37,11 +37,11 @@ public class ChangeProfileController {
 	public ModelAndView editProfileForm(HttpServletRequest request, ChangeProfileCommand changeProfileCommand) {
 		
 		HttpSession session = request.getSession();
-		String code = (String)session.getAttribute("code");
+		int usercode = (int)session.getAttribute("code");
 		
 		ModelAndView mav = new ModelAndView();
 		
-		Member member = dao.selectMember(code);
+		Member member = dao.selectMember(usercode);
 		
 		mav.addObject("member", member);
 		mav.setViewName("settings/edit/profile");
@@ -58,13 +58,13 @@ public class ChangeProfileController {
 			return "edit/profile";
 		}
 		
-		String usercode = (String)session.getAttribute("code");
+		int usercode = (int)session.getAttribute("code");
 		
 		try {
 			changeProfileService.changeProfile(
 					usercode,
 					changeProfileCommand);
-			return "settings/edit/profile";
+			return "settings/edit/editComplete";
 		}catch(AlreadyExistionIdException e) {
 			System.out.println("아이디 중복 오류 발생");
 			errors.rejectValue("id", "duplicate");

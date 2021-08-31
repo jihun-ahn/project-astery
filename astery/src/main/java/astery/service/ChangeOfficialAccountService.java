@@ -14,10 +14,10 @@ public class ChangeOfficialAccountService {
 	}
 	
 	@Transactional
-	public void changeOfficialAccount(String usercode, char official) {
+	public void changeOfficialAccount(int usercode, char official) {
 		Member member = dao.selectMember(usercode);
 		
-		if(!(official=='a' || official=='b')) {
+		if(!(official=='A' || official=='B' || official=='F')) {
 			throw new InputException();
 		}
 		
@@ -25,4 +25,5 @@ public class ChangeOfficialAccountService {
 		dao.updateOfficial(member);
 		
 	}
+	
 }
