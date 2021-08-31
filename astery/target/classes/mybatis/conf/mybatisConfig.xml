@@ -8,6 +8,7 @@
 	<typeAliases> 
 		<typeAlias type="astery.vo.Member" alias="member"/>
 		<typeAlias type="astery.vo.Post" alias="post"/>
+ 		<typeAlias type="astery.DTO.UserDTO" alias="user" />
 	</typeAliases>
 		
 	<!-- <mappers>

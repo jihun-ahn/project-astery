@@ -6,8 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>메인화면</title>
-<link rel="stylesheet" type="text/css" href="/resources/css/astery.css?ver=1">
-<link rel="stylesheet" type="text/css" href="/resources/css/main.css?ver=1">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/astery.css?ver=1">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css?ver=1">
 
 </head>
 <body>
