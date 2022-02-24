@@ -23,13 +23,18 @@
 		   			<header>
 	 	   				<div class="profilephoto"> <!--  프로필사진  -->
 		   					<a href="">
+<<<<<<< HEAD
 		   						<img class="prophoto" src="${pageContext.request.contextPath}/resources/img/${member.profilephoto}" alt="테스트프사">
+=======
+		   						<img class="profilephotoPic" src="">
+>>>>>>> 008e85ad7668365fdd3410cc5c9260b0553dd9f1
 		   					</a>
 		   				</div>
 		   				<div class="usernickname"> <!-- 닉네임 -->
 		   					<a href=""></a>
 		   				</div>
 		   			</header>
+<<<<<<< HEAD
 	 	   			<div class="s_photo">
 		            		<img src="${pageContext.request.contextPath}/resources/img/${p.picture}" alt="테스트사진">
 		            		</div>
@@ -39,6 +44,21 @@
 		   					<li><a href='<c:url value='/'/>'><img class="like" src="${pageContext.request.contextPath}/resources/img/like.png" width="10px" height="10px"></a></li>
 		   				  	<li><a href='<c:url value='/'/>'><img class="comment" src="${pageContext.request.contextPath}/resources/img/comment.png" width="10px" height="10px"></a></li>
 		   					<li><a href='<c:url value='/'/>'><img class="bookmark" src="${pageContext.request.contextPath}/resources/img/bookmark.png" width="10px" height="10px"></a></li>
+=======
+	 	   			<div class="feedImage"> <!-- 게시물사진 -->
+	<%-- 	   				<c:forEach var="img" items="${img}">
+		   					<c:if test="">
+		   						<img class="feedPic" src="" class="imgg">
+		   					</c:if>
+		   				</c:forEach> --%>
+		   			</div>
+		   			<div class="icon">
+		   				<!-- 좋아요, 댓글달기, 북마크 -->
+		   				<ul>
+		   					<li><a href='<c:url value='/'/>'><img class="like" src="/resources/img/like.png" width="10px" height="10px"></a></li>
+		   				  	<li><a href='<c:url value='/'/>'><img class="comment" src="/resources/img/comment.png" width="10px" height="10px"></a></li>
+		   					<li><a href='<c:url value='/'/>'><img class="bookmark" src="/resources/img/bookmark.png" width="10px" height="10px"></a></li>
+>>>>>>> 008e85ad7668365fdd3410cc5c9260b0553dd9f1
 		   				</ul>
 		   			</div>
 		   			<div> <!--  좋아요갯수표시 -->

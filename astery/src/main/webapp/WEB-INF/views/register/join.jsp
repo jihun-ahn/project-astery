@@ -5,7 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
+<<<<<<< HEAD
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/join.css">
+=======
+<link rel="stylesheet" href="/resources/css/join.css">
+>>>>>>> 008e85ad7668365fdd3410cc5c9260b0553dd9f1
 </head>
 <body>
       <h2>회원가입</h2>

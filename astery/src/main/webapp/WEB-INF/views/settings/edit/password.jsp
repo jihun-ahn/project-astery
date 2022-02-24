@@ -6,8 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>비밀번호 변경</title>
+<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/astery.css?after" >
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/settings.css?after">
+=======
+<link rel="stylesheet" type="text/css" href="/resources/css/astery.css?after" >
+<link rel="stylesheet" type="text/css" href="/resources/css/settings.css?after">
+>>>>>>> 008e85ad7668365fdd3410cc5c9260b0553dd9f1
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/include/header.jsp" />

@@ -10,7 +10,11 @@
         	<form action="<c:url value='/search'/>" method="GET" id="searchbox">
         		<input type="text" name="search" id="search" placeholder="검색">
 				<!-- <input type="image" src="/resources/img/search.png" alt="검색"> -->
+<<<<<<< HEAD
 				<input type="image" src="${pageContext.request.contextPath}/resources/img/search.png" alt="검색">
+=======
+				<input type="image" src="/resources/img/search.png" alt="검색">
+>>>>>>> 008e85ad7668365fdd3410cc5c9260b0553dd9f1
 			</form>
        	</div>
         <ul class="menuList">

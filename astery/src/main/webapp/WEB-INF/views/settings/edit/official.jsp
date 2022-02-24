@@ -5,9 +5,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<<<<<<< HEAD
 <title>공식 계정 전환</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/astery.css?after" >
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/official.css?after" >
+=======
+<<<<<<<< HEAD:astery/src/main/webapp/WEB-INF/views/settings/edit/official.jsp
+<title>공식 계정 전환</title>
+<link rel="stylesheet" type="text/css" href="/resources/css/astery.css?after" >
+<link rel="stylesheet" type="text/css" href="/resources/css/official.css?after" >
+========
+<title>공식 계정 설정</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/astery.css?after" >
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/official.css?after" >
+>>>>>>>> 008e85ad7668365fdd3410cc5c9260b0553dd9f1:astery/src/main/webapp/WEB-INF/views/settings/official.jsp
+>>>>>>> 008e85ad7668365fdd3410cc5c9260b0553dd9f1
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/include/header.jsp" />
